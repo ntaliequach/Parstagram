@@ -23,11 +23,24 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func onSubmitButton(_ sender: Any) {
-        let pet = PFObject(className: "Pets")
+        let post = PFObject(className: "Pets")
         
-        pet["name"] = "Spencer"
-        pet["weight"] = 50
-        pet["owner"] = PFUser.current()!
+        post["caption"] = commentField.text!
+        post["author"] = PFUser.current()!
+        
+        let imageData = imageView.image!.pngData()
+        let file = PFFileObject(name: "image.png", data: imageData!)
+        
+        post["image"] = file
+        
+        post.saveInBackground { (success, Error) in
+            if success  {
+                self.dismiss(animated: true, completion: nil)
+                print("saved")
+            }   else    {
+                print("error")
+            }
+        }
     }
     
     
