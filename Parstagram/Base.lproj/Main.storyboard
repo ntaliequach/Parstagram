@@ -134,7 +134,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="63g-Kr-0gS">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="63g-Kr-0gS">
                                                     <rect key="frame" x="28" y="19" width="374" height="460"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="63g-Kr-0gS" secondAttribute="height" multiplier="187:230" id="FP0-3W-YMy"/>
@@ -173,7 +173,7 @@
                     <navigationItem key="navigationItem" id="Dfc-Jw-6qI">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="camera" catalog="system" id="7eu-Uj-qBc">
                             <connections>
-                                <segue destination="76y-qA-kld" kind="presentation" id="ZDb-WZ-NJp"/>
+                                <segue destination="76y-qA-kld" kind="presentation" identifier="" id="ZDb-WZ-NJp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
